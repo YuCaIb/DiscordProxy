@@ -12,7 +12,14 @@ Türkiye'deki Discord erişim engelini **yalnızca Discord için** aşan, ek pak
 
 ## Nasıl kullanılır?
 
-1. **Node.js kurun.** [nodejs.org](https://nodejs.org) adresinden LTS sürümünü indirip kurun (varsayılan ayarlar yeterli).
+1. **Node.js kurun.** Başlat menüsüne `PowerShell` (ya da `cmd`) yazıp açın ve şu komutu çalıştırın:
+
+   ```powershell
+   winget install OpenJS.NodeJS.LTS
+   ```
+
+   Kurulum bitince pencereyi kapatıp **yeni bir pencere** açın ve `node -v` yazın; `v22.x.x` gibi bir sürüm görüyorsanız tamamdır.
+   Zaten kuruluysa bu adımı atlayın. `winget` bulunamazsa Microsoft Store'dan **Uygulama Yükleyici**'yi (App Installer) güncelleyin.
 2. **Bu repoyu indirin.** GitHub'da yeşil **Code** düğmesi → **Download ZIP**, ardından ZIP'i bir klasöre çıkarın.
    Ya da: `git clone https://github.com/YuCaIb/discordVpn.git`
 3. **`Discord Baslat.bat` dosyasına çift tıklayın.** Bir komut penceresi açılır, proxy başlar ve Discord proxy ile açılır.
@@ -44,7 +51,7 @@ Ek seçenekler: `--ptb`, `--canary` (Discord sürümü), `--port 8882`, `--gecik
 
 | Belirti | Çözüm |
 | --- | --- |
-| `Node.js bulunamadi` | Node.js'i kurun, ardından pencereyi kapatıp dosyayı yeniden açın. |
+| `Node.js bulunamadi` | `winget install OpenJS.NodeJS.LTS` ile Node.js'i kurun, ardından pencereyi kapatıp dosyayı yeniden açın. |
 | `Discord kurulu bulunamadı` | `--kur` ile kurun ya da `--web` ile tarayıcıda açın. |
 | `Proxy başlatılamadı ... EADDRINUSE` | Port başka bir program tarafından kullanılıyor: `--port 8882` ile deneyin. |
 | Discord açılıyor ama bağlanamıyor | `--ayrintili` ile çalıştırıp günlüğe bakın; `--gecikme 50` gibi daha yüksek bir değer deneyin. |
@@ -82,7 +89,14 @@ A tiny launcher that bypasses the Discord block in Turkey **for Discord only**, 
 
 ## How to use
 
-1. **Install Node.js.** Download the LTS version from [nodejs.org](https://nodejs.org) and install it with the default options.
+1. **Install Node.js.** Type `PowerShell` (or `cmd`) in the Start menu, open it, and run:
+
+   ```powershell
+   winget install OpenJS.NodeJS.LTS
+   ```
+
+   When it finishes, close the window, open **a new one**, and type `node -v`; if you see a version like `v22.x.x`, you're done.
+   Skip this step if Node.js is already installed. If `winget` isn't found, update **App Installer** from the Microsoft Store.
 2. **Download this repo.** On GitHub click the green **Code** button → **Download ZIP**, then extract it to a folder.
    Or: `git clone https://github.com/YuCaIb/discordVpn.git`
 3. **Double-click `Discord Baslat.bat`.** A console window opens, the proxy starts, and Discord launches through it.
@@ -114,7 +128,7 @@ More options: `--ptb`, `--canary` (Discord build), `--port 8882`, `--gecikme 10`
 
 | Symptom | Fix |
 | --- | --- |
-| `Node.js bulunamadi` (Node.js not found) | Install Node.js, then close the window and run the file again. |
+| `Node.js bulunamadi` (Node.js not found) | Install Node.js with `winget install OpenJS.NodeJS.LTS`, then close the window and run the file again. |
 | `Discord kurulu bulunamadı` (Discord not installed) | Install it with `--kur`, or open it in the browser with `--web`. |
 | `Proxy başlatılamadı ... EADDRINUSE` (proxy couldn't start) | Another program is using the port: try `--port 8882`. |
 | Discord opens but can't connect | Run with `--verbose` and check the log; try a higher value such as `--gecikme 50`. |
